@@ -241,7 +241,7 @@ class MakeBinaryDictionary {
 
     private void writeToDict(String dictFilename) {
         // 4MB max, 22-bit offsets
-        dict = new byte[1024 * 1024 * 1024];
+        dict = new byte[128 * 1024 * 1024];
         dictSize = 0;
         writeWordsRec(roots);
         System.out.println("Dict Size = " + dictSize);
